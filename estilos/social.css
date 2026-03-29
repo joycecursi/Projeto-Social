@@ -10,15 +10,58 @@
     height: 0px;
 }
 img{
-    width: 100vw;
-
+    width: 100%;
+    height: auto;
+    max-width: 100%;
+    display: block;
 }
 a{
-    display:block;
+    display: block;
     background-color: darkred;
     color: white;
     padding: 20px;
     text-align: center;
-    font-weight:bolder ;
+    font-weight: bolder;
     text-decoration: none;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    transition: background-color 0.3s;
+}
+a:hover {
+    background-color: rgb(139, 0, 0);
+}
+
+/* Responsivo para Mobile */
+@media (max-width: 600px) {
+    img {
+        width: 100%;
+        height: auto;
+    }
+    
+    a {
+        padding: 15px 10px;
+        font-size: 14px;
+    }
+}
+
+/* Responsivo para Tablet */
+@media (min-width: 601px) and (max-width: 1024px) {
+    img {
+        width: 100%;
+        height: auto;
+    }
+    
+    a {
+        padding: 18px;
+        font-size: 16px;
+    }
+}
+
+/* Responsivo para Desktop */
+@media (min-width: 1025px) {
+    a {
+        padding: 20px;
+        font-size: 16px;
+    }
 }
